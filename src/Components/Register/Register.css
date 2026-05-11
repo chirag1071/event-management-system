@@ -1,0 +1,40 @@
+@import url('../Login/Login.css');
+
+.gender-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.gender-label {
+  font-size: 14px;
+  color: #888;
+  margin-right: 4px;
+}
+
+.gender-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.gender-option input[type="radio"] {
+  accent-color: #ff6b00;
+  width: 16px;
+  height: 16px;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+.auth-footer a { color: #ff6b00; text-decoration: none; font-weight: 600; }
+.auth-footer a:hover { text-decoration: underline; }

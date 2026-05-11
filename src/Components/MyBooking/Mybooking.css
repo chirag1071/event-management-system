@@ -1,0 +1,132 @@
+.my-bookings-page {
+  padding: 80px 8%;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+.bookings-header { text-align: center; margin-bottom: 40px; }
+.bookings-header h1 { font-size: 40px; font-weight: 800; color: #0f172a; }
+.bookings-header .highlight { color: #ff8800; }
+.bookings-header p { color: #64748b; margin-top: 12px; }
+
+.booking-alert {
+  max-width: 800px;
+  margin: 0 auto 24px;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 80px 0;
+  color: #94a3b8;
+}
+.no-bookings span { font-size: 64px; display: block; margin-bottom: 16px; }
+.no-bookings p { font-size: 18px; font-weight: 600; }
+
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mini-ticket {
+  display: flex;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.mini-ticket:hover { transform: translateX(10px); }
+
+.mini-ticket-main { flex: 1; padding: 32px; }
+
+.ticket-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ticket-id {
+  font-family: monospace;
+  font-size: 11px;
+  color: #94a3b8;
+  background: #f8fafc;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.cancel-ticket {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #ef4444;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.cancel-ticket:hover { background: #ef4444; color: #fff; border-color: #ef4444; }
+
+.mini-ticket-main h3 { font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 20px; }
+
+.mini-info { display: flex; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; }
+.mini-info span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.mini-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 20px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.ticket-price { font-size: 18px; font-weight: 800; color: #ff8800; }
+
+.seating {
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.mini-ticket-stub {
+  width: 160px;
+  background: #f8fafc;
+  border-left: 2px dashed #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 12px;
+}
+.mini-ticket-stub span {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
