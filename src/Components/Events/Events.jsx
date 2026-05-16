@@ -14,7 +14,7 @@ const defaultEvents = [
     time: "19:32",
     price: "2499",
     category: "Cricket",
-    image: "https://images.unsplash.com/photo-1540747913346-19212a4b423e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=800&q=80",
     link: "/cricket"
   },
   {

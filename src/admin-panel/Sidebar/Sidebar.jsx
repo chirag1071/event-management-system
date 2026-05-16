@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import { Users, Calendar, FolderTree, Image, Notebook, LogOut, Settings, ChevronDown, ChevronRight, Shield, Lock, UserCheck, LayoutDashboard } from "lucide-react";
+import { Users, Calendar, FolderTree, Image, Notebook, LogOut, Settings, ChevronDown, ChevronRight, Shield, Lock, UserCheck, LayoutDashboard, Globe } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
@@ -13,13 +13,19 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-      <div className="sidebar-logo">
-        <span className="logo-icon">⚡</span>
-        <h2>Admin Panel</h2>
-      </div>
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div className="sidebar-logo" style={{ margin: 0, padding: 0 }}>
+          <span className="logo-icon">⚡</span>
+          <h2>One Stop Event</h2>
+        </div>
+      </Link>
 
       <nav className="sidebar-nav">
         <span className="nav-section-label">Main Menu</span>
+
+        <Link to="/" className="nav-item" style={{ background: 'rgba(255, 136, 0, 0.1)', color: '#ff8800', fontWeight: 'bold' }}>
+          <Globe size={18} /> View Main Website
+        </Link>
 
         <Link to="/admin" className={`nav-item ${isActive('/admin') ? 'active' : ''}`}>
           <LayoutDashboard size={18} /> Dashboard

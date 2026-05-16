@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from "react-router-dom"
-import { User, LogOut, Calendar, Menu, X } from 'lucide-react'
+import { User, LogOut, Calendar, Menu, X, Settings } from 'lucide-react'
 import './Header.css'
 
 function Navbar() {
@@ -84,6 +84,11 @@ function Navbar() {
                   <Link to="/mybooking" onClick={() => setOpen(false)}>
                     <Calendar size={16} /> My Booking
                   </Link>
+                  {loggedUser.email?.toLowerCase().includes('admin') && (
+                    <Link to="/admin" onClick={() => setOpen(false)}>
+                      <Settings size={16} /> Admin Panel
+                    </Link>
+                  )}
                   <hr />
                   <button className="logout-link" onClick={handleLogout}>
                     <LogOut size={16} /> Logout
