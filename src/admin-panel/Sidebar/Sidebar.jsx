@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import { Users, Calendar, FolderTree, Image, Notebook, LogOut, Settings, ChevronDown, ChevronRight, Shield, Lock, UserCheck, LayoutDashboard, Globe } from "lucide-react";
+import { Users, Calendar, FolderTree, Image, Notebook, LogOut, Settings, ChevronDown, ChevronRight, Shield, Lock, UserCheck, LayoutDashboard, Globe, Ticket } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
@@ -29,6 +29,9 @@ const Sidebar = () => {
 
         <Link to="/admin" className={`nav-item ${isActive('/admin') ? 'active' : ''}`}>
           <LayoutDashboard size={18} /> Dashboard
+        </Link>
+        <Link to="/admin/bookings" className={`nav-item ${isActive('/admin/bookings') ? 'active' : ''}`}>
+          <Ticket size={18} /> Ticket Bookings
         </Link>
         <Link to="/admin/users" className={`nav-item ${isActive('/admin/users') ? 'active' : ''}`}>
           <Users size={18} /> User List

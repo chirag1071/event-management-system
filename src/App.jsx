@@ -26,6 +26,7 @@ import SystemConfig from "./admin-panel/Settings/SystemConfig";
 import Security from "./admin-panel/Settings/Security";
 import Roles from "./admin-panel/Settings/Roles";
 import Dashboard from "./admin-panel/Dashboard/Dashboard";
+import Bookings from "./admin-panel/Bookings/Bookings";
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
                 <div className="admin-content">
                   <Routes>
                     <Route path="/" element={<Dashboard />} />
+                    <Route path="/bookings" element={<Bookings />} />
                     <Route path="/users" element={<UserList />} />
                     <Route path="/eventpost" element={<EventPost />} />
                     <Route path="/postcategory" element={<Postcategory />} />

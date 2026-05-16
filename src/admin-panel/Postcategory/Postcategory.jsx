@@ -52,10 +52,8 @@ function PostCategory() {
   };
 
   const handleDelete = (id) => {
-    if (window.confirm('Delete this category?')) {
-      setCategories(prev => prev.filter(c => c.id !== id));
-      showAlert('🗑️ Category deleted!');
-    }
+    setCategories(prev => prev.filter(c => c.id !== id));
+    showAlert('🗑️ Category deleted!');
   };
 
   const startEdit = (cat) => { setEditId(cat.id); setEditName(cat.name); };

@@ -23,6 +23,15 @@ const BookingModal = ({ event, onClose }) => {
     if (!payMethod) { setAlert('⚠️ Please select a payment method!'); return; }
     if (payMethod === 'UPI' && !upiId.trim()) { setAlert('⚠️ Please enter your UPI ID!'); return; }
 
+    let loggedUser = { fullname: 'Guest User', email: 'N/A' };
+    try {
+      const stored = JSON.parse(localStorage.getItem('loggedUser'));
+      if (stored && typeof stored === 'object') {
+        loggedUser.fullname = stored.fullname || stored.name || stored.username || 'Guest User';
+        loggedUser.email = stored.email || 'N/A';
+      }
+    } catch(e) {}
+
     // Save to mybooking
     const booking = {
       id: `${event.name.slice(0,3).toUpperCase()}-${Date.now()}`,
@@ -33,6 +42,9 @@ const BookingModal = ({ event, onClose }) => {
       section: section.toUpperCase(),
       row: 'GA',
       payMethod,
+      qty: qty,
+      userName: loggedUser.fullname,
+      userEmail: loggedUser.email,
     };
     const existing = JSON.parse(localStorage.getItem('mybookings') || '[]');
     localStorage.setItem('mybookings', JSON.stringify([...existing, booking]));
