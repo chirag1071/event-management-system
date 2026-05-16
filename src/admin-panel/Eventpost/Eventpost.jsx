@@ -1,4 +1,4 @@
-import './EventPost.css';
+import './Eventpost.css';
 import { useState, useEffect } from 'react';
 import { Upload, Type, Calendar, Clock, DollarSign, MapPin, AlignLeft, Tag, Image as ImageIcon } from 'lucide-react';
 

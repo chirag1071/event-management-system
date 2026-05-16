@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Logoutt.css";
+import "./Logouts.css";
 
 const Logoutt = () => {
   const [activeTab, setActiveTab] = useState("personal");

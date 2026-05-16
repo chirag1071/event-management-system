@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Mail, Phone, MessageSquare, Trash2 } from 'lucide-react';
-import "./ContactList.css";
+import "./Contactlist.css";
 
 const initialContacts = [
-  { id: 1, fullName: "Sparks User",   email: "spark@gmail.com",      mobile_no: "8989898989", message: "Interested in a partnership." },
-  { id: 2, fullName: "Uday Shrimali", email: "udshrimali@gmail.com",  mobile_no: "9876543210", message: "Venue inquiry for May." },
-  { id: 3, fullName: "Samay Shah",    email: "samay@gmail.com",       mobile_no: "7777777777", message: "Hello admin, great platform!" },
-  { id: 4, fullName: "Prince Jain",   email: "prince@gmail.com",      mobile_no: "1234567890", message: "Bug report on gallery." },
-  { id: 5, fullName: "Chirag Gohil",  email: "chirag2605@gmail.com",  mobile_no: "6351284880", message: "Looking for sponsorship." },
+  { id: 1, fullName: "Sparks User", email: "spark@gmail.com", mobile_no: "8989898989", message: "Interested in a partnership." },
+  { id: 2, fullName: "Uday Shrimali", email: "udshrimali@gmail.com", mobile_no: "9876543210", message: "Venue inquiry for May." },
+  { id: 3, fullName: "Samay Shah", email: "samay@gmail.com", mobile_no: "7777777777", message: "Hello admin, great platform!" },
+  { id: 4, fullName: "Prince Jain", email: "prince@gmail.com", mobile_no: "1234567890", message: "Bug report on gallery." },
+  { id: 5, fullName: "Chirag Gohil", email: "chirag2605@gmail.com", mobile_no: "6351284880", message: "Looking for sponsorship." },
 ];
 
 const STORAGE_KEY = 'contacts';
