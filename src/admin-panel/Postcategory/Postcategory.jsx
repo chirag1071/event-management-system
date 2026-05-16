@@ -1,4 +1,4 @@
-import './postcategory.css';
+import './Postcategory.css';
 import { useState, useEffect } from 'react';
 import { Trash2, Plus, Type, Image as ImageIcon, Upload, Edit2, Check, X } from 'lucide-react';
 
